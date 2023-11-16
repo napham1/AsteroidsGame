@@ -11,6 +11,7 @@ public void draw()
 {
   background(0);
   Bob.show();
+  Bob.move();
   for(int i = 0; i < starrysky.length; i++){
     starrysky[i].show();
   }
@@ -20,7 +21,16 @@ public void keyPressed(){
   if(key == 'h'){
     Bob.hyperspace();
   }
-  if(key == 'm'){
-    Bob.accelerate();
+  if(key == 'w'){
+    Bob.accelerate(1);
+  }
+  if(key == 's'){
+    Bob.accelerate(-1);
+  }
+  if(key == 'd'){
+    Bob.turn(10);
+  }
+  if(key == 'a'){
+    Bob.turn(-10);
   }
 }
