@@ -1,13 +1,13 @@
 Spaceship Bob = new Spaceship();
 Star [] starrysky = new Star[250];
-void setup() 
+public void setup() 
 {
   size(500,500);
   for(int i = 0; i < starrysky.length; i++){
     starrysky[i] = new Star();
   }
 }
-void draw() 
+public void draw() 
 {
   background(0);
   Bob.show();
@@ -16,7 +16,7 @@ void draw()
     starrysky[i].show();
   }
 }
-void keyPressed(){
+public void keyPressed(){
   if(key == 'h'){
     Bob.hyperspace();
   }
