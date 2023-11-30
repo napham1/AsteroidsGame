@@ -7,7 +7,7 @@ public void setup()
   for(int i = 0; i < starrysky.length; i++){
     starrysky[i] = new Star();
   }
-  for(int i = 0; i < 11; i++){
+  for(int i = 0; i < 25; i++){
     Bills.add(new Asteroid());
   }
 }
@@ -19,7 +19,7 @@ public void draw()
   for(int i = 0; i < starrysky.length; i++){
     starrysky[i].show();
   }
-  for(int i = 0; i < 11; i++){
+  for(int i = 0; i < 25; i++){
     Bills.get(i ).show();
     Bills.get(i).move();
   }
