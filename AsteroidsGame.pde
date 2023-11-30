@@ -1,10 +1,14 @@
 Spaceship Bob = new Spaceship();
 Star [] starrysky = new Star[250];
+ArrayList <Asteroid> Bills = new ArrayList <Asteroid>();
 public void setup() 
 {
   size(500,500);
   for(int i = 0; i < starrysky.length; i++){
     starrysky[i] = new Star();
+  }
+  for(int i = 0; i < 11; i++){
+    Bills.add(new Asteroid());
   }
 }
 public void draw() 
@@ -15,7 +19,12 @@ public void draw()
   for(int i = 0; i < starrysky.length; i++){
     starrysky[i].show();
   }
+  for(int i = 0; i < 11; i++){
+    Bills.get(i ).show();
+    Bills.get(i).move();
+  }
 }
+
 public void keyPressed(){
   if(key == 'h'){
     Bob.hyperspace();
